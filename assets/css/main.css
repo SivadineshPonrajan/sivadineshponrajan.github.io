@@ -182,6 +182,10 @@ hr {
     font-size: 3rem;
 }
 
+.name-anim span:hover {
+    cursor: pointer;
+}
+
 .primary-color {
     background-color: #5469C9;
     border-color: #5469C9;
