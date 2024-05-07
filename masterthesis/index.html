@@ -11,17 +11,20 @@
 		<center>
 			<h1>Nerf - Master Thesis</h1>
 			<br>
-			<iframe src="./juice.html" width="560" height="560" id="iframe"></iframe>
+			<h3>Static Environment</h3>
+			<!-- <iframe src="./static.html" width="560" height="560" id="static-iframe"></iframe> -->
+			<h3>Dynamic Environment</h3>
+			<iframe src="./dynamic.html" width="560" height="560" id="dynamic-iframe"></iframe>
 		</center>
 
 		<script>
 			window.addEventListener('keydown', function(event) {
-				var iframe = document.getElementById('iframe');
+				var iframe = document.getElementById('dynamic-iframe');
 				iframe.contentWindow.postMessage({ type: 'keydown', keyCode: event.keyCode }, '*');
 			});
 	
 			window.addEventListener('keyup', function(event) {
-				var iframe = document.getElementById('iframe');
+				var iframe = document.getElementById('dynamic-iframe');
 				iframe.contentWindow.postMessage({ type: 'keyup', keyCode: event.keyCode }, '*');
 			});
 		</script>
