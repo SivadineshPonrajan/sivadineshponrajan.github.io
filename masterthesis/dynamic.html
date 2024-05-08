@@ -43,7 +43,7 @@ scene.add(directionalLight);
 
 camera.position.set(-0.84, 1.47, 7.06);
 
-new GLTFLoader().load('./model/dynamic/dynamic.glb', ({ scene: model }, animations) => {
+new GLTFLoader().load('../masterthesis/model/dynamic/dynamic.glb', ({ scene: model }, animations) => {
   scene.add(model);
   
   model.scale.setScalar(2.0);
