@@ -16,13 +16,15 @@
 
 import * as THREE from 'https://cdn.skypack.dev/three@0.136.0';
 import { GLTFLoader } from 'https://cdn.skypack.dev/three@0.136.0/examples/jsm/loaders/GLTFLoader.js';
+import { DRACOLoader } from 'https://cdn.skypack.dev/three@0.136.0/examples/jsm/loaders/DRACOLoader.js';
 import { OrbitControls } from 'https://cdn.skypack.dev/three@0.136.0/examples/jsm/controls/OrbitControls.js';
 
 const renderer = new THREE.WebGLRenderer({alpha:true});
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(50, window.innerWidth / window.innerHeight);
-let mesh;
 const controls = new OrbitControls(camera, renderer.domElement);
+
+let mesh;
 
 renderer.setSize(window.innerWidth, window.innerHeight);
 // scene.background = new THREE.Color(0xeff5555); // Colored Background
@@ -43,7 +45,15 @@ scene.add(directionalLight);
 
 camera.position.set(-0.84, 1.47, 7.06);
 
-new GLTFLoader().load('../masterthesis/model/dynamic/dynamic.glb', ({ scene: model }, animations) => {
+// Set up DRACOLoader
+const dracoLoader = new DRACOLoader();
+dracoLoader.setDecoderPath('https://www.gstatic.com/draco/v1/decoders/')
+
+// Configure GLTFLoader to use DRACOLoader
+const gltfLoader = new GLTFLoader();
+gltfLoader.setDRACOLoader(dracoLoader);
+
+gltfLoader.load('../masterthesis/model/dynamic/dynamic.glb', ({ scene: model }, animations) => {
   scene.add(model);
   
   model.scale.setScalar(2.0);
