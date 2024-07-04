@@ -1,5 +1,7 @@
 let SSkey = sessionStorage.getItem('IsLoaded');
 
+SSkey = "Yeah"; // Comment for the loader animation to show up
+
 if (SSkey == "Yeah") {
   $('.sidekick').remove();
   $('.mainkick').show();
