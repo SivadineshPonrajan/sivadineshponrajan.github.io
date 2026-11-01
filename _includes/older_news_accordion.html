@@ -1,0 +1,90 @@
+<button class="accordion">Show Older News (2024 & Before)</button>
+<div class="panel">
+  <p>📣 **[Dec 2024]** Tutorial accepted on <a href="https://sites.google.com/view/qmi-fuzz-ieee-2025/home">Quantum Machine Intelligence and Fuzzy Learning, FUZZ-IEEE 2025</a></p>
+  <p>📣 **[Dec 2024]** 1 paper accepted by <a href="https://ieeexplore.ieee.org/abstract/document/10888912/">ICASSP 2025</a></p>
+  <p>📣 **[Dec 2024]** 1 paper accepted by <a href="https://ojs.aaai.org/index.php/AAAI/article/view/32810">AAAI 2025</a></p>
+  <p>📣 **[Dec 2024]** Special Session: <a href="https://sites.google.com/view/qml-ijcnn-2025/home">Quantum Machine Learning Algorithms and Applications, IJCNN 2025</a></p>
+  <p>📣 **[Oct 2024]** 1 paper accepted by <a href="https://openreview.net/forum?id=SgxeJW4DGk">TMLR</a></p>
+  <p>📣 **[Sept 2024]** 1 paper accepted by <a href="https://www.nature.com/articles/s44385-024-00003-9">Nature Biomedical Innovations</a></p>
+  <p>📣 **[Sept 2024]** Hiring PhD Candidate in Multimodal Large Language Models (LLM) for Healthcare at Halmstad University, Sweden</p>
+  <p>📣 **[Sept 2024]** Promoted to **Associate Professor (Docent)** at Halmstad University, Sweden</p>
+  <p>📣 **[Jul 2024]** 1 paper accepted by <a href="https://arxiv.org/abs/2405.10995">CIKM 2024</a></p>
+  <p>📣 **[Jul 2024]** 2 papers accepted by TMLR ([paper 1](https://openreview.net/forum?id=LNvbgBFPMt), [paper 2](https://openreview.net/forum?id=LCPzaR9mML))</p>
+  <p>📣 **[May 2024]** 2 papers accepted by <a href="https://ieeexplore.ieee.org/document/10589693">IEEE TNNLS</a> & <a href="https://ieeexplore.ieee.org/document/10572363">IEEE TFS</a></p>
+  <p>📣 **[Feb 2024]** Promoted to **Senior Lecturer** at Halmstad University, Sweden</p>
+  <p>📣 **[Jan 2024]** Joined the Editorial Board as **Associate Editor** of <a href="https://www.sciencedirect.com/journal/neural-networks/about/editorial-board">Neural Networks, Elsevier</a></p>
+  <p>📣 **[Nov 2023]** Joined the Editorial Board as **Associate Editor** of <a href="https://www.sciencedirect.com/journal/alexandria-engineering-journal/about/editorial-board">Alexandria Engineering Journal, Elsevier</a></p>
+  <p>📣 **[May 2023]** 1 paper accepted by <a href="https://aclanthology.org/2023.acl-long.419/">ACL 2023</a></p>
+</div>
+
+<style>
+/* CSS for the Accordion - You can also move this to your main CSS file */
+.accordion {
+  background-color: #f0f0f0;
+  color: #444;
+  cursor: pointer;
+  padding: 12px 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: background-color 0.4s ease;
+  font-size: 1em;
+  margin-top: 15px;
+  border-radius: 4px;
+}
+
+.active, .accordion:hover {
+  background-color: #ddd;
+}
+
+.accordion:after {
+  content: '\02795'; /* Plus sign */
+  font-size: 0.8em;
+  color: #777;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: '\2796'; /* Minus sign */
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  border: 1px solid #eee;
+  border-top: none;
+  border-radius: 0 0 4px 4px;
+}
+
+.panel p {
+  margin-bottom: 8px;
+  line-height: 1.4;
+  padding-left: 5px;
+}
+</style>
+
+<script>
+// JavaScript for the Accordion functionality - It's best to put this in your main JS file if you have one,
+// or ensure it's loaded only once if you have multiple accordions.
+document.addEventListener('DOMContentLoaded', function() {
+  var accordions = document.getElementsByClassName("accordion");
+  var i;
+
+  for (i = 0; i < accordions.length; i++) {
+    accordions[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var panel = this.nextElementSibling;
+      if (panel.style.maxHeight) {
+        panel.style.maxHeight = null;
+      } else {
+        panel.style.maxHeight = panel.scrollHeight + "px";
+      }
+    });
+  }
+});
+</script>
